@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color:aqua;
+    color: black;
+    border: 1px solid;
+    padding:0;
+}
+
+nav {
+    margin: 15px 0;
+    background-color: black;
+    padding: 16px 0px;
+}
+
+nav .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav .nav li {
+    margin: 0 15px;
+}
+
+nav .nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.main_container{
+    width:80%;
+    margin: auto;
+}
+
+main  {
+    display: flex;
+}
+
+.container {
+    width: 90%;
+    background-color: #f9f9f9;
+
+}
+.container p {
+    background-color: #ddd;
+    height:20px;
+    margin-top: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+aside{
+    width: 20%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    
+}
+.login{
+    box-shadow: 1px 1px 1px 1px #ddd;
+    height: 350px;
+
+}
+
+.danhsach{
+    margin-top: 20px;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    background-color: rgb(231, 225, 225);
+}
+
+.sanpham{
+    margin-top: 20px;
+    box-shadow: 1px 1px 1px 1px #ddd;
+}
+.sanpham h3 {
+    background-color: rgb(231, 225, 225);
+
+}
+
+
+.text{
+    color:aqua;
+}
+footer {
+        background: gray;
+        height: 350px;
+        margin-top: 50px;
+}
+      .footer img {
+        width: 100px;
+        height: 100px;
+      }
+      .footer {
+        padding: 70px;
+      }
+      .ft {
+
+        display: flex;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        color: white;
+        margin-top: 10px;
+}
+
+.sp {
+    display:flex;
+}

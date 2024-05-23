@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <title>Đăng nhập</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,6 +28,7 @@
             padding: 20px 0;
             text-align: center;
         }
+
 
         header h3 {
             margin: 0;
@@ -80,47 +80,70 @@
             border-radius: 5px;
         }
 
-        .slide img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .products {
+        /* .product-detail {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            text-align: center;
-            width: 30%;
-            margin-bottom: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-card img {
-            max-width: 100%;
+        .product-detail img {
+            width: 50%;
             height: auto;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
-        .product-card .price {
-            font-weight: bold;
+        .product-detail h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-detail .price {
+            font-size: 20px;
             color: #007bff;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .product-detail p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        } */
+
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            height: auto;
+            outline: none;
+        }
+        .option {
+            display: flex;
+            justify-content: center;
+            gap: 10px; 
+            margin-top: 20px; 
+        }
+        button {
+            justify-content: center;
+            background-color: #ccc;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.85;
         }
 
         aside {
@@ -220,7 +243,7 @@
 <body>
     <div class="main_container">
         <header>
-            <h3>Siêu thị trực tuyến</h1>
+            <h3>Siêu thị trực tuyến</h3>
         </header>
         <nav>
             <div class="menu">
@@ -233,29 +256,26 @@
             </div>
         </nav>
         <main>
+            
             <div class="container">
-                <div class="slide">
-                    <img src="img/anh0.jpg">
+                <h2>Đăng ký thành viên</h2>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Nhập email">
                 </div>
-                <div class="products">
-                    <div class="product-card" data-id="1">
-                        <img src="img/iphoneX.jpg" alt="Product 1">
-                        <p>Product 1 </p>
-                        <p class="price">$19.99</p>
-                    </div>
-                    <div class="product-card" data-id="2">
-                        <img src="img/iphoneX.jpg" alt="Product 2">
-                        <p>Product 2 </p>
-                        <p class="price">$29.99</p>
-                    </div>
-                    <div class="product-card" data-id="3">
-                        <img src="img/iphoneX.jpg" alt="Product 3">
-                        <p>Product 3 </p>
-                        <p class="price">$39.99</p>
-                    </div>
+                <div class="form-group">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" placeholder="Nhập tên đăng nhập">
+                </div>
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="option">
+                    <button type="button">Đăng ký</button>
+                    <button type="button">Nhập lại</button>
                 </div>
             </div>
-
             <aside>
                 <section class="login">
                     <h3>TÀI KHOẢN</h3>
@@ -267,7 +287,6 @@
                             <input type="text">
                         </div>
                         <br>
-                        <br>
                         <div class="form-group">
                             Mật khẩu
                             <br>
@@ -278,7 +297,6 @@
                         <div class="form-group">
                             <button>Đăng nhập</button>
                         </div>
-
                         <div class="text">
                             Quên mật khẩu
                             <br>
@@ -289,7 +307,6 @@
                 <section class="danhsach">
                     <h3>DANH MỤC</h3>
                     <div class="danhsach-con">
-
                         Đồng hồ
                         <hr>
                         Laptop
@@ -301,10 +318,8 @@
                         Tivi
                         <hr>
                     </div>
-
                 </section>
                 <input type="text" style="margin-top: 20px;" placeholder="Từ khoá tìm kiếm">
-
                 <section class="sanpham">
                     <h3>SẢN PHẨM BÁN CHẠY</h3>
                     <div class="dongho">
@@ -330,14 +345,10 @@
                 </section>
             </aside>
         </main>
-        <!-- -------- -->
-
         <footer>
-
             <div class="footer">
                 <div class="ft">
                     <img src="img/FPTShop_logo.jpg" alt="">
-
                     <ul>
                         <h5>Công Ty Điện Tử FPT SỐ 1 VIỆT NAM</h5>
                         <li>Tầng 2 toà nhà T10,Times City Vĩnh Tuy,Hai Bà Trưng,Hà Nội.</li>
@@ -346,8 +357,6 @@
                         <li>Số ĐKKD: 0106341306.Ngày cấp: 16/03/2017.</li>
                         <li>Nơi cấp: Sở kế hoach và Đầu tư Thành phố Hà Nội.</li>
                     </ul>
-
-
                     <ul>
                         <h5>VỀ CHÚNG TÔI</h5>
                         <li>Giới thiệu về TocoToco</li>
@@ -357,7 +366,6 @@
                         <li>Quy định chung</li>
                         <li>TT liên hệ & ĐKKD</li>
                     </ul>
-
                     <ul>
                         <h5>CHÍNH SÁCH</h5>
                         <li>Chính sách thành viên</li>
@@ -368,22 +376,9 @@
                         <li>Bảo trì,bảo hành</li>
                     </ul>
                 </div>
+            </div>
         </footer>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const productCards = document.querySelectorAll(".product-card");
-
-            productCards.forEach(card => {
-                card.addEventListener("click", function () {
-                    const id = this.getAttribute("data-id");
-                    if (id) {
-                        window.location.href = `product_detail.html?id=${id}`;
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
