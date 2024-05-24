@@ -199,9 +199,58 @@
         .footer ul li {
             margin-top: 10px;
         }
-        .dongho{
+
+        .dongho {
             display: flex;
             align-items: center;
+        }
+
+        .product-section,
+        .comment-section {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product-section h2,
+        .comment-section h2 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: -20px -20px 20px -20px;
+        }
+
+        .product-section li {
+            margin-bottom: 10px;
+        }
+
+        .comment-section ul {
+            list-style-type: none;
+        }
+
+        .comment {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .comment button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .comment input {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -214,10 +263,10 @@
         <nav>
             <div class="menu">
                 <ul class="nav">
-                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="#">Danh mục</a></li>
-                    <li><a href="#">Sản phẩm</a></li>
-                    <li><a href="#">Bình luận</a></li>
+                    <li><a href="index.html">Sản phẩm</a></li>
+                    <li><a href="product_detail.html">Bình luận</a></li>
                 </ul>
             </div>
         </nav>
@@ -228,6 +277,34 @@
                     <h1 id="product-name">Tên sản phẩm</h1>
                     <p class="price" id="product-price">$19.99</p>
                     <p id="product-description">Mô tả sản phẩm chi tiết...</p>
+                </div>
+
+                <div class="comment-section">
+                    <h2>Bình Luận</h2>
+                    <ul>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                    </ul>
+                </div>
+                <div class="comment">
+                    <input placeholder="Nhập bình luận"></input>
+                    <button>Gửi bình luận</button>
+                </div>
+
+                <div class="product-section">
+                    <h2>SẢN PHẨM CÙNG LOẠI</h2>
+                    <ul>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                    </ul>
                 </div>
             </div>
             <aside>
@@ -341,22 +418,58 @@
             const products = {
                 1: {
                     image: "img/iphoneX.jpg",
-                    name: "Product 1",
-                    price: "$19.99",
-                    description: "Product 1 description"
+                    name: "Sản phẩm 1",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 1"
                 },
                 2: {
                     image: "img/iphoneX.jpg",
-                    name: "Product 2",
-                    price: "$29.99",
-                    description: "Product 2 description"
+                    name: "Sản phẩm 2",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 2"
                 },
                 3: {
                     image: "img/iphoneX.jpg",
-                    name: "Product 3",
-                    price: "$39.99",
-                    description: "Product 3 description"
-                }
+                    name: "Sản phẩm 3",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 3"
+                },
+                4: {
+                    image: "img/iphoneX.jpg",
+                    name: "Sản phẩm 4",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 4"
+                },
+                5: {
+                    image: "img/iphoneX.jpg",
+                    name: "Sản phẩm 5",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 5"
+                },
+                6: {
+                    image: "img/iphoneX.jpg",
+                    name: "Sản phẩm 6",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 6"
+                },
+                7: {
+                    image: "img/iphoneX.jpg",
+                    name: "Sản phẩm 7",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 7"
+                },
+                8: {
+                    image: "img/iphoneX.jpg",
+                    name: "Sản phẩm 8",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 8"
+                },
+                9: {
+                    image: "img/iphoneX.jpg",
+                    name: "Sản phẩm 9",
+                    price: "1.000.000 VNĐ",
+                    description: "Mô tả sản phẩm 9"
+                },
             };
 
             const product = products[productId];
