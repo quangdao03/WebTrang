@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <title>Chi tiết sản phẩm</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,6 +28,7 @@
             padding: 20px 0;
             text-align: center;
         }
+
 
         header h3 {
             margin: 0;
@@ -80,47 +80,36 @@
             border-radius: 5px;
         }
 
-        .slide img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .products {
+        .product-detail {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            text-align: center;
-            width: 25%;
-            margin-bottom: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-card img {
-            max-width: 100%;
+        .product-detail img {
+            width: 50%;
             height: auto;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
-        .product-card .price {
-            font-weight: bold;
+        .product-detail h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .product-detail .price {
+            font-size: 20px;
             color: #007bff;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .product-detail p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
         }
 
         aside {
@@ -210,9 +199,58 @@
         .footer ul li {
             margin-top: 10px;
         }
-        .dongho{
+
+        .dongho {
             display: flex;
             align-items: center;
+        }
+
+        .product-section,
+        .comment-section {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .product-section h2,
+        .comment-section h2 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: -20px -20px 20px -20px;
+        }
+
+        .product-section li {
+            margin-bottom: 10px;
+        }
+
+        .comment-section ul {
+            list-style-type: none;
+        }
+
+        .comment {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .comment button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .comment input {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -220,73 +258,55 @@
 <body>
     <div class="main_container">
         <header>
-            <h3>Siêu thị trực tuyến</h1>
+            <h3>Siêu thị trực tuyến</h3>
         </header>
         <nav>
             <div class="menu">
                 <ul class="nav">
                     <li><a href="index.html">Trang chủ</a></li>
                     <li><a href="#">Danh mục</a></li>
-                    <li><a href="#">Sản phẩm</a></li>
-                    <li><a href="#">Bình luận</a></li>
+                    <li><a href="index.html">Sản phẩm</a></li>
+                    <li><a href="product_detail.html">Bình luận</a></li>
                 </ul>
             </div>
         </nav>
         <main>
             <div class="container">
-                <div class="slide">
-                    <img src="img/anh0.jpg">
+                <div class="product-detail">
+                    <img id="product-image" src="img/iphoneX.jpg" alt="Product Image">
+                    <h1 id="product-name">Sản phẩm iphoneX</h1>
+                    <p class="price" id="product-price">1.000.000VNĐ</p>
+                    <p id="product-description">Mô tả sản phẩm chi tiết...</p>
                 </div>
-                <div class="products">
-                    <div class="product-card" data-id="1">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 1">
-                        <p>Sản phẩm 1</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                    <div class="product-card" data-id="2">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 2">
-                        <p>Sản phẩm 2</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                    <div class="product-card" data-id="3">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 3">
-                        <p>Sản phẩm 3</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                    <div class="product-card" data-id="4">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 4">
-                        <p>Sản phẩm 4</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                    <div class="product-card" data-id="5">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 5">
-                        <p>Sản phẩm 5</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                    <div class="product-card" data-id="6">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 6">
-                        <p>Sản phẩm 6</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                    <div class="product-card" data-id="7">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 7">
-                        <p>Sản phẩm 7</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                    <div class="product-card" data-id="8">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 8">
-                        <p>Sản phẩm 8</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                    <div class="product-card" data-id="9">
-                        <img src="img/iphoneX.jpg" alt="Sản phẩm 9">
-                        <p>Sản phẩm 9</p>
-                        <p class="price">1.000.000 VNĐ</p>
-                    </div>
-                </div>
-                
-            </div>
 
+                <div class="comment-section">
+                    <h2>Bình Luận</h2>
+                    <ul>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                        <li>Sản phẩm đẹp cá</li>
+                    </ul>
+                </div>
+                <div class="comment">
+                    <input placeholder="Nhập bình luận"></input>
+                    <button>Gửi bình luận</button>
+                </div>
+
+                <div class="product-section">
+                    <h2>SẢN PHẨM CÙNG LOẠI</h2>
+                    <ul>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                        <li><a href="#">Sản phẩm 1</a></li>
+                    </ul>
+                </div>
+            </div>
             <aside>
                 <section class="login">
                     <h3>TÀI KHOẢN</h3>
@@ -298,7 +318,6 @@
                             <input type="text">
                         </div>
                         <br>
-                        <br>
                         <div class="form-group">
                             Mật khẩu
                             <br>
@@ -309,7 +328,6 @@
                         <div class="form-group">
                             <button>Đăng nhập</button>
                         </div>
-
                         <div class="text">
                             Quên mật khẩu
                             <br>
@@ -320,7 +338,6 @@
                 <section class="danhsach">
                     <h3>DANH MỤC</h3>
                     <div class="danhsach-con">
-
                         Đồng hồ
                         <hr>
                         Laptop
@@ -332,10 +349,8 @@
                         Tivi
                         <hr>
                     </div>
-
                 </section>
                 <input type="text" style="margin-top: 20px;" placeholder="Từ khoá tìm kiếm">
-
                 <section class="sanpham">
                     <h3>SẢN PHẨM BÁN CHẠY</h3>
                     <div class="dongho">
@@ -361,14 +376,10 @@
                 </section>
             </aside>
         </main>
-        <!-- -------- -->
-
         <footer>
-
             <div class="footer">
                 <div class="ft">
                     <img src="img/FPTShop_logo.jpg" alt="">
-
                     <ul>
                         <h5>Công Ty Điện Tử FPT SỐ 1 VIỆT NAM</h5>
                         <li>Tầng 2 toà nhà T10,Times City Vĩnh Tuy,Hai Bà Trưng,Hà Nội.</li>
@@ -377,8 +388,6 @@
                         <li>Số ĐKKD: 0106341306.Ngày cấp: 16/03/2017.</li>
                         <li>Nơi cấp: Sở kế hoach và Đầu tư Thành phố Hà Nội.</li>
                     </ul>
-
-
                     <ul>
                         <h5>VỀ CHÚNG TÔI</h5>
                         <li>Giới thiệu về TocoToco</li>
@@ -388,7 +397,6 @@
                         <li>Quy định chung</li>
                         <li>TT liên hệ & ĐKKD</li>
                     </ul>
-
                     <ul>
                         <h5>CHÍNH SÁCH</h5>
                         <li>Chính sách thành viên</li>
@@ -399,22 +407,9 @@
                         <li>Bảo trì,bảo hành</li>
                     </ul>
                 </div>
+            </div>
         </footer>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const productCards = document.querySelectorAll(".product-card");
-
-            productCards.forEach(card => {
-                card.addEventListener("click", function () {
-                    const id = this.getAttribute("data-id");
-                    if (id) {
-                        window.location.href = `product_detail.html?id=${id}`;
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
